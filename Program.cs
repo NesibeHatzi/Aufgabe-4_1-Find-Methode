@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -63,7 +63,7 @@ public void AppendChild(Tree<TType> child)
                 child.PrintTree(print + "*");
             }
 
-              public List<Tree<T>> Find(TType search, List<Tree<TType>> node = null)
+              List<Tree<TType>> Find(TType search, List<Tree<TType>> node = null)
         {
             if(node == null)
             {
@@ -77,19 +77,16 @@ public void AppendChild(Tree<TType> child)
 
             foreach(Tree<TType> child in _objectList)
             {
-                child.Find(search, node);
+                Find(search, node);
             }
 
             return node;
-        }
+        }}
 
         public override string ToString()
         {
             return _theObjects.ToString();
-}
+
         } 
     } 
 }
-
-
-
